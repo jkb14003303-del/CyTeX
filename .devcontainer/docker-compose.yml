@@ -1,7 +1,7 @@
 services:
   cytex-texlive:
-    # image: ran350/cytex-texlive:0.0.1
-    build: . # if you want to build the image locally
+    image: tanuking551/cytex-texlive:0.0.1
+    # build: . # if you want to build the image locally
     volumes:
       - ../:/workspaces/CyTeX
       - ./.latexmkrc:/root/.latexmkrc
