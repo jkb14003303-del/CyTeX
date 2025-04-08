@@ -10,14 +10,15 @@ RUN apt-get update && apt-get install -y
 # install texlive
 RUN apt-get install -y \
     evince \
-    texlive-full \
     latexmk \
     language-pack-ja \
+    texlive-latex-base \
+    texlive-lang-japanese \
+    texlive-latex-recommended \
+    texlive-latex-extra \
+    texlive-fonts-recommended \
+    texlive-extra-utils \
     xzdec
-# xdvik-ja \ 
-# texlive-lang-cjk \
-# texlive-latex-extra \
-# texlive-extra-utils
 
 RUN apt-get install -y \
     cpanminus \
