@@ -1,5 +1,5 @@
-# ran350/cytex-texlive
-# https://hub.docker.com/r/ran350/cytex-texlive/
+# tanuking551/cytex-texlive
+# https://hub.docker.com/r/tanuking551/cytex-texlive
 
 FROM ubuntu:24.04
 
