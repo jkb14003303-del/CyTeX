@@ -1,7 +1,6 @@
-version: "3.8"
 services:
   cytex-texlive:
-    image: ran350/cytex-texlive:0.0.1
+    image: tanuking551/cytex-texlive:0.0.1
     # build: . # if you want to build the image locally
     volumes:
       - ../:/workspaces/CyTeX
