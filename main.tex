@@ -1,9 +1,152 @@
-\documentclass{article}
-\usepackage{url}
+\documentclass[dvipdfmx,report]{jsbook}
 
+% ===== 基本レイアウト =====
+\usepackage[a4paper,top=30mm,bottom=30mm,left=30mm,right=30mm]{geometry}
+
+% ===== フォント（和文HaranoAji）=====
+\usepackage[haranoaji]{pxchfon}
+
+% ===== 数式・図表 =====
+\usepackage[version=4]{mhchem}
+\usepackage{amsmath,amssymb,amsfonts,bm}
+\usepackage[dvipdfmx]{graphicx}
+% \graphicspath{{figures/}}
+\usepackage[format=hang]{subcaption}
+
+% ===== 文献 =====
+\usepackage[numbers,square]{natbib}
+\setcitestyle{super}
+
+% 単位（siunitx v3）
+\usepackage{siunitx}
+\sisetup{
+  per-mode = power,
+  propagate-math-font = true,
+  reset-math-version = false,
+  reset-text-family = false,
+  reset-text-series = false,
+  reset-text-shape = false,
+  text-family-to-math = true,
+  text-series-to-math = true,
+  exponent-product = \times,
+  output-decimal-marker = {.}
+}
+\sisetup{
+  range-phrase = {\,\text{～}\,},
+  range-units  = single
+}
+
+% ===== しおり・ハイパーリンク =====
+\usepackage[
+  dvipdfmx,
+  setpagesize=false,
+  bookmarks=true,
+  bookmarksnumbered=true,
+  bookmarksdepth=3,
+  colorlinks=true,
+  linkcolor = blue,
+  pdfencoding=unicode,
+  pdftitle={タイトル},
+  pdfauthor={著者名},
+  pdfsubject={サブジェクト},
+  pdfkeywords={キーワード}
+]{hyperref}
+\usepackage{pxjahyper}
+
+% ===== 見出し体裁 =====
+\usepackage{titlesec}
+\titleformat{\chapter}[hang]{\LARGE\gtfamily\bfseries}{第\arabic{chapter}章}{1em}{}
+\titlespacing*{\chapter}{0pt}{0pt}{20pt}
+
+% ===== 番号付け（章.節.連番）=====
+\numberwithin{equation}{section}
+\numberwithin{figure}{section}
+\numberwithin{table}{section}
+\renewcommand{\theequation}{\thechapter.\arabic{section}.\arabic{equation}}
+\renewcommand{\thefigure}{\thechapter.\arabic{section}.\arabic{figure}}
+\renewcommand{\thetable}{\thechapter.\arabic{section}.\arabic{table}}
+
+% キャプション小技
+\makeatletter
+\newcommand{\figcaption}[1]{\def\@captype{figure}\caption{#1}}
+\newcommand{\tblcaption}[1]{\def\@captype{table}\caption{#1}}
+\makeatother
+
+% 段落番号設定
+\newcounter{parstep}[subsection]
+\titleformat{\paragraph}[runin]{\normalfont}{\makebox[2zw][l]{(\arabic{parstep})}}{0pt}{}[\hspace{2zw}]
+\titlespacing*{\paragraph}{0pt}{.6ex}{0pt}
+\newcommand{\parstep}{\refstepcounter{parstep}\paragraph{\mbox{}}}
+
+%================= 本文 =================
 \begin{document}
-ビルド方法は README.md の \#\#\#ビルド章 を参照してください．
-aiueo
-a
-\url{https://github.com/cysec-lab/cytex}
+
+% --- 表紙 ---
+\pagestyle{empty}
+\title{令和XX年度　修士論文\\[2cm]題目\\[1cm]\huge{タイトル}\\[5cm]}
+\author{%
+  埼玉大学大学院理工学研究科　2　年\\
+  所属研究室　学籍番号　著者名\\
+  指導教員：指導教員名 准教授\\[1cm]
+  令和　年　月　日　提出}
+\date{}
+\maketitle
+\clearpage
+
+% --- 概要 ---
+\newpage
+\chapter*{概要}
+\thispagestyle{empty}
+ここに概要を記述
+
+% --- 目次 ---
+\newpage
+\setcounter{tocdepth}{2}
+\tableofcontents
+\thispagestyle{empty}
+\clearpage
+\pagestyle{plain}
+\setcounter{page}{1}
+
+% --- 第1章 ---
+\chapter{序論}
+\section{研究背景}
+\cite{yin2021influence}
+
+\section{研究目的}
+
+\newpage
+
+% --- 第2章 ---
+\chapter{原理}
+\section{原理1}
+
+\clearpage
+
+% --- 第3章 ---
+\chapter{実験手法}
+\section{装置構成}
+
+\clearpage
+
+% --- 第4章 ---
+\chapter{実験結果・考察}
+\section{結果}
+
+\clearpage
+
+% --- 第5章 ---a
+\chapter{結言}
+
+\clearpage
+
+% --- 謝辞 ---
+\chapter*{謝辞}
+
+\clearpage
+
+% --- 参考文献 ---
+\bibliographystyle{plain}
+\bibliography{reference}
+
 \end{document}
