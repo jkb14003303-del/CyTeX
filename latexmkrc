@@ -15,3 +15,4 @@ $out_dir = 'out';
 # default PDF generation mode (0 = dvi mode)
 # This requires the -pdfdvi flag when running latexmk
 $pdf_mode = 0;
+
