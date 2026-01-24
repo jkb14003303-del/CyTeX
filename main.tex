@@ -11,6 +11,7 @@
 \usepackage[dvipdfmx]{graphicx}
 \usepackage{placeins}
 \usepackage[dvipdfmx]{graphicx}
+\usepackage{here}
 
 % \graphicspath{{figures/}}
 \usepackage[format=hang]{subcaption}
@@ -176,15 +177,15 @@
 	\centering
 	\begin{subfigure}[b]{0.48\columnwidth}
 		\centering
-		\includegraphics[width=0.8\linewidth]{netumae.png}
-		\subcaption{電流ゼロ区間　　　}
+		\includegraphics[width=0.7\linewidth]{netumae.png}
+		\subcaption{　電流ゼロ区間}
 		\label{fig:thermal}
 	\end{subfigure}
 	\hfill
 	\begin{subfigure}[b]{0.48\columnwidth}
 		\centering
-		\includegraphics[width=0.8\linewidth]{netuato.png}
-		\subcaption{再発弧直後　　　}
+		\includegraphics[width=0.7\linewidth]{netuato.png}
+		\subcaption{　再発弧直後}
 		\label{fig:dielectric}
 	\end{subfigure}
 	\caption{熱的再発弧時の発光画像}
@@ -195,15 +196,15 @@
 	\centering
 	\begin{subfigure}[b]{0.48\columnwidth}
 		\centering
-		\includegraphics[width=0.8\linewidth]{yuudenmae.png}
-		\subcaption{電流ゼロ区間　　　}
+		\includegraphics[width=0.7\linewidth]{yuudenmae.png}
+		\subcaption{　電流ゼロ区間}
 		\label{fig:thermal2}
 	\end{subfigure}
 	\hfill
 	\begin{subfigure}[b]{0.48\columnwidth}
 		\centering
-		\includegraphics[width=0.8\linewidth]{yuudenato.png}
-		\subcaption{再発弧直後　　　}
+		\includegraphics[width=0.7\linewidth]{yuudenato.png}
+		\subcaption{　再発弧直後}
 		\label{fig:dielectric2}
 	\end{subfigure}
 	\caption{誘電的再発弧時の発光画像}
@@ -222,9 +223,9 @@
 電力用開閉装置は，その電流開閉能力に基づき，用途および性能に応じて以下のように大別される\cite{IEEJ1965}。
 
 \begin{enumerate}
-    \item \textbf{断路器（Disconnector）}：電路の接続切り替えや保守時の隔離を目的とし，無電流あるいはそれに極めて近い状態で電路を開閉する。
-    \item \textbf{負荷開閉器（Load Switch）}：定格負荷電流や過負荷電流程度の開閉は安全に行えるが，短絡事故等に伴う故障電流の遮断能力は有さない。
-    \item \textbf{遮断器（Circuit Breaker）}：常時電流のみならず，過酷な故障電流をも支障なく遮断できるように設計されており，系統の保護用装置として機能する。
+    \item \textbf{断路器}：電路の接続切り替えや保守時の隔離を目的とし，無電流あるいはそれに極めて近い状態で電路を開閉する。
+    \item \textbf{負荷開閉器}：定格負荷電流や過負荷電流程度の開閉は安全に行えるが，短絡事故等に伴う故障電流の遮断能力は有さない。
+    \item \textbf{遮断器}：常時電流のみならず，過酷な故障電流をも支障なく遮断できるように設計されており，系統の保護用装置として機能する。
 \end{enumerate}
 
 これらの比較をまとめると表\ref{tab:cb_class}のようになる\cite{IEICE1992}。
@@ -233,7 +234,7 @@
   \centering
   \caption{開閉機器の比較}
   \label{tab:cb_class}
-  \includegraphics[width=0.8\linewidth]{遮断器の表.png}
+  \includegraphics[width=0.7\linewidth]{遮断器の表.png}
 \end{table}
 
 \subsection{気中開閉器}
@@ -294,27 +295,15 @@ V_{\mathrm{arc}} = n V_{\mathrm{pol}} + E_{\mathrm{col}} L_\mathrm{a}
 
 \FloatBarrier
 \subsection{アークの負性抵抗特性}
-通常，オームの法則において電流は電圧に比例し，
-その比例定数は抵抗として定義される．
-しかし，アークの抵抗値は安定的ではなく，
-アークの状態に応じて変化するため，
-負性抵抗特性を示す場合がある．
-図\ref{I_Vtokusei}に，アーク長を 2 mm とした場合の，
-異なる圧力条件下における電流–電圧特性を示す．
-図\ref{I_Vtokusei}より，いずれの圧力条件においても
-低電流領域で負性抵抗特性を示していることが分かる．
-特に，圧力が低い条件下では，
-負性抵抗特性を示す電流領域が広くなる．
-
-すなわち，大気圧条件下などの比較的低圧領域では，
-電圧が上昇すると電流が減少する特性を示す．
-また，\ref{sec:arc_voltage}節で前述したように，
-アーク電圧はアーク長に比例して上昇するため，
-実際にアーク長が変化する条件下では，
-より強い負性抵抗特性が現れる．
-この場合，アーク長が増大し，
-すなわち電圧が上昇すると，
-電流は大きく減少することになる\cite{菅泰雄1988高圧ヘリウム雰囲気中におけるアークの特性について}．
+通常、オームの法則において電流は電圧に比例し、その比例定数の逆数は抵抗として定義される。
+しかし、アークの抵抗値は一定ではなく、アークの状態（温度や電離度など）に応じて変化するため、負性抵抗特性を示す場合がある。
+図\ref{I_Vtokusei}に、アーク長を2 mmとした場合の、異なる圧力条件下における電流–電圧特性を示す。
+図より、いずれの圧力条件においても、特に低電流領域で電圧の増加に伴い電流が減少する負性抵抗特性が確認できる。
+この特性は、圧力が低い条件下ほど、負性抵抗を示す電流領域が広くなる傾向にある。
+すなわち、大気圧付近を含む比較的低圧な領域では、電圧の上昇に対して電流が減少するという挙動を示す。
+また、\ref{sec:arc_voltage}節で述べたように、アーク電圧はアーク長に比例して上昇する。
+したがって、アーク長が動的に変化する条件下では、より顕著な負性抵抗特性が現れる。
+この場合、アーク長の増大（＝電圧の上昇）に伴い、電流は大幅に減少することになる\cite{菅泰雄1988高圧ヘリウム雰囲気中におけるアークの特性について}。
 
 \begin{figure}[tb]
   \centering
@@ -324,58 +313,69 @@ V_{\mathrm{arc}} = n V_{\mathrm{pol}} + E_{\mathrm{col}} L_\mathrm{a}
 \end{figure}
 \FloatBarrier
 
+
 \subsection{他の遮断器の特徴}
 気中開閉器との比較のため，本節では他方式の遮断器の特徴について述べる．
 
 (1) 油遮断器 \cite{Mizushima1983}  
-油中で接点を開離することにより，発生したアークが油を分解して生じる水素ガスの冷却作用，
+
+油遮断器は，油中で接点を開離することにより発生したアークが油を分解して生じる水素ガスの冷却作用，
 局部的な圧力上昇，油の流動による置換作用，および油の高い絶縁耐力を利用してアークを消弧する方式である．
 しかし，高速度での遮断が困難であることに加え，
 絶縁油は劣化しやすく火災の原因となる場合もあるため，
-保守・管理に多大な手間を要するなどの短所が多い．
-このため，近年の日本ではほとんど使用されなくなっている．
+保守・管理に多大な手間を要するという欠点を有する．
+このため，近年の日本ではほとんど使用されなくなっている．\\
 
 (2) 空気遮断器  
-10～30 気圧程度の圧縮空気を，電極間に発生したアークへ吹き付けることで，
-アークを吹き飛ばし，電流零点通過時に急速に冷却することでイオンを消滅させ，
+
+空気遮断器は，10～30 気圧程度の圧縮空気を電極間に発生したアークへ吹き付けることにより，
+アークを吹き飛ばすとともに，電流零点通過時に急速に冷却することでイオンを消滅させ，
 圧力によって消弧する遮断器である \cite{IEEJ_CB_1975}．
 アーク時間が短く遮断性能が高いことに加え，
-アークガスの除去が高速であるため高速度再投入が可能であるという特徴を有する．
-一方で，遮断性能が圧縮空気の圧力，流速，流量などの条件に依存する点や，
+アークガスの除去が高速であるため，高速度再投入が可能であるという特徴を有する．
+一方で，遮断性能が圧縮空気の圧力，流速，流量などの条件に強く依存する点や，
 アーク消弧時の空気流が機外へ排出され，
-爆発的な動作音を発生させるという欠点もある \cite{Mizushima1983}．
+爆発的な動作音を発生させるという欠点も指摘されている \cite{Mizushima1983}．\\
 
-(3) SF$_6$ガス遮断器  
-空気遮断器において空気の代わりに，
+(3) SF$_6$ ガス遮断器  
+
+SF$_6$ ガス遮断器は，空気遮断器において空気の代わりに，
 絶縁性能の高い SF$_6$ ガスを消弧媒質として用いた遮断器である．
-開発当初は，空気遮断器と同様に圧縮機によって予めガス圧力を高め，
+開発当初は，圧縮機によって予めガス圧力を高め，
 遮断時に弁を開いて高圧ガスをアークに吹き付ける構造であったが，
 現在ではアークの熱エネルギーを利用してガスを圧縮し，
-吹付け圧力を高める構造が主流となっている \cite{Yanabu2000,吉岡芳夫2006電力用遮断器の現状と将来}．
+吹付け圧力を高める構造が主流となっている
+\cite{Yanabu2000,吉岡芳夫2006電力用遮断器の現状と将来}．
 SF$_6$ ガスは無毒・無臭・不燃で極めて安定な気体であり，
-大気圧下において空気の約3倍という非常に優れた電気的絶縁性能を有することが最大の特徴である \cite{bo2017investigation}．
-また，SF$_6$ ガスは平均自由行程が短く衝突電離を起こしにくいことに加え，
+大気圧下において空気の約3倍という非常に高い電気的絶縁性能を有することが最大の特徴である\\
+\cite{bo2017investigation}．
+また，平均自由行程が短く衝突電離を起こしにくいことに加え，
 分子量が大きく電気的負性気体であるため，
 電子を付着させて電界による加速を受けにくい負イオンを形成する．
-これらの特性により，遮断器の遮断性能が向上する \cite{IEEJ_CB_1975,Hidaka2009}．
+これらの特性により，遮断器の遮断性能が大きく向上する
+\cite{IEEJ_CB_1975,Hidaka2009}．
 さらに，SF$_6$ ガス中のアークは空気中と比較してアーク温度が低く，
-高温部が中心部に集中する特徴を有する \cite{IEEJ_CB_1975,Yanabu2000,Hidaka2009}．
+高温部が中心部に集中する特徴を有する
+\cite{IEEJ_CB_1975,Yanabu2000,Hidaka2009}．
 このためアークの冷却が急速に進み，
 電子密度の低下が早いことも遮断性能向上の一因である．
 その結果，アーク中の導電率の減少が早く，
 SF$_6$ ガス遮断器は高い遮断性能を示す．
-現在，高電圧・大電力用遮断器の大部分は SF$_6$ ガス遮断器であるが \cite{吉岡芳夫2006電力用遮断器の現状と将来}，
+現在，高電圧・大電力用遮断器の大部分は SF$_6$ ガス遮断器であるが
+\cite{吉岡芳夫2006電力用遮断器の現状と将来}，
 SF$_6$ ガスは地球温暖化係数が100年換算で CO$_2$ の 23,900 倍と非常に高く，
 1997年の京都議定書において排出削減対象物質とされた．
-このため，SF$_6$ ガスに代わる絶縁・消弧媒質に関する研究も進められている \cite{斉藤仁2009真空遮断器の最近の動向,大久保仁2003環境低負荷の真空遮断器}．
+このため，SF$_6$ ガスに代わる絶縁・消弧媒質に関する研究も進められている
+\cite{斉藤仁2009真空遮断器の最近の動向,大久保仁2003環境低負荷の真空遮断器}．
 
 (4) 真空遮断器 \cite{IEEJ_CB_1975}  
+
 真空遮断器は，真空中における高い絶縁耐力と，
 金属蒸気や荷電粒子の拡散による優れた消弧特性を利用し，
 真空容器内で電流の開閉および遮断を行う遮断器である．
 主な利点として，
 遮断動作を密閉容器内で行うため容器外にアークや高温ガスを放出しないこと，
-可動軸の慣性が小さく多頻度開閉に適すること，
+可動部の慣性が小さく多頻度開閉に適すること，
 操作機構が小型で遮断器全体を小型・軽量化できること，
 接触子の消耗が少なく真空バルブ寿命まで無保守・無点検で使用可能であること，
 さらに接触部が完全密封構造であるため，
@@ -383,6 +383,7 @@ SF$_6$ ガスは地球温暖化係数が100年換算で CO$_2$ の 23,900 倍と
 安定した通電および遮断性能を維持できることが挙げられる．
 また，SF$_6$ ガスのような環境負荷物質を消弧媒質として使用しないことから，
 環境適合性が高く，近年注目を集めている．
+
 
 \subsection{再発弧}
 電気学会では，電流零点を迎えたアークに対し，
@@ -438,149 +439,165 @@ $\theta_M$ はアーク時定数である．
   \label{fig:電流零点における過渡回復電圧}
 \end{figure}
 \FloatBarrier
+\clearpage
 \section{発光分光測定}
 \subsection{発光分光法}
-放電時に発生する発光は，種々のスペクトル成分の集合体であり，
+
+放電時に発生する発光は，
+種々のスペクトル成分から成る集合体である．
 回折格子を用いてこの光を分光することで，
-各元素に固有の輝線スペクトルを取り出すことができる．
-得られたスペクトルの強度や線幅を解析することにより，
-プラズマの温度，電子密度，イオン温度などの物理量を推定できる．
+各元素（原子・イオン）に固有の輝線スペクトルを得ることができる．
+得られたスペクトルの強度，強度比，あるいは線幅を解析することにより，
+プラズマの電子温度，電子密度，ガス温度などの物理量を推定することが可能である．
 
 発光分光測定の主な利点として，
-マイクロ波法などの他の測定手法と比較して
+マイクロ波法等の他の測定手法と比較して
 時間的および空間的分解能に優れること，
-ならびにプラズマに対して非干渉であり，
-測定対象に影響を与えないことが挙げられる．
-特に，非干渉性という特徴は，
-高温プラズマや化学的に活性なプラズマの計測において，
-プローブなどの測定器をプラズマ中に挿入することが困難な場合に，
-極めて有効である \cite{YamamotoMurayama1995}．
+ならびにプラズマに対して非摂動（非干渉）であり，
+測定対象の状態を乱さないことが挙げられる．
+特にこの非摂動性は，
+高温プラズマや化学的に活性なプラズマにおいて，
+静電プローブ等の測定器を内部に挿入することが
+物理的に困難な場合に極めて有効である
+\cite{YamamotoMurayama1995}．
 
 気中アーク以外に発光分光測定が適用されている例として，
-アーク溶接，遮断器内部におけるガスアーク，
+アーク溶接，遮断器内のガスアーク，
 および放電加工におけるアークプラズマなどが挙げられる．
-平岡氏はアーク溶接において，
-アルゴンおよびヘリウムの混合雰囲気中で発生するアークの
+平岡はアーク溶接において，
+アルゴン（Ar）およびヘリウム（He）の混合雰囲気中で発生するアークを対象に，
 温度および電子密度の測定を行っている．
 温度については，
-Ar，Ar$^+$，He のスペクトル線を用いた
+Ar，Ar$^{+}$，He のスペクトル線を用いた
 ボルツマンプロット法により評価しており，
 電子密度については，
-アルゴン・ヘリウム混合ガスに 1.5\% の水素を添加し，
-水素 H$\beta$ 線のシュタルク広がりから算出している．
+混合ガスに 1.5\% の水素を添加し，
+水素 H$_{\beta}$ 線のシュタルク広がり
+（Stark broadening）から算出している．
 その結果，
 電流 100 A において，
-アーク温度は約 16\,000～18\,000 K，
+アーク温度は約 16,000～18,000 K，
 電子密度は約
 $1.1\times10^{22}$～$1.1\times10^{23}$ m$^{-3}$
 （$1.1\times10^{16}$～$1.1\times10^{17}$ cm$^{-3}$）
-であることが示されている \cite{平岡和雄1993混合ガスシールドアークプラズマの発光分光特性とその解析}．
+であることが示されている
+\cite{平岡和雄1993混合ガスシールドアークプラズマの発光分光特性とその解析}．
 
-鹿野氏らは，
-アルゴンガス遮断器内で発生するアーク放電に対して
-発光分光測定を行い，
-Ar および Ar$^+$ スペクトル線の線強度比法
+また，鹿野らは，
+アルゴンガス遮断器内で発生するアーク放電に対して分光測定を行い，
+Ar および Ar$^{+}$ の輝線強度比法
 （ボルツマンプロット法）を用いて
-アーク温度を測定している．
-測定の結果，
+アーク温度を算出している．
+その結果，
 電流値 70～100 A の条件において，
-アーク温度は約 12\,000～15\,000 K であることが報告されている\cite{鹿野竜大2019マイクロ秒分光計測を用いたアーク温度計測}．
+アーク温度は約 12,000～15,000 K であることが
+報告されている
+\cite{鹿野竜大2019マイクロ秒分光計測を用いたアーク温度計測}．
 
 \subsection{スペクトル線の発生機構}
-プラズマによる発光メカニズムには，主に以下の三つがある．
+プラズマによる発光メカニズムは，主に以下の三つの過程に分類される。\\
 
-(1) 自然放射  
-原子やイオンが熱的に励起されると，
-エネルギーの高い励起準位へ遷移する．
-その後，寿命 $\tau$ をもって，
-より低いエネルギー準位へ遷移する際に発光が生じる
-\cite{YamamotoMurayama1995,DaidojiNakahara1996,KinoshitaOtaNagaiMinami2015}．
-このような発光を自然放射と呼び，
-原子・イオンに固有の線スペクトルを発生する
-\cite{YamamotoMurayama1995,KinoshitaOtaNagaiMinami2015}．
+(1) \textbf{自然放射（自発放出）}  
 
-(2) 再結合放射  
-自由電子がイオンの束縛準位に捕獲される際，
-電子の自由状態と束縛状態とのエネルギー差に対応した
-発光が生じる．
-この発光は再結合放射と呼ばれ，
-連続スペクトルを形成する
-\cite{YamamotoMurayama1995,KinoshitaOtaNagaiMinami2015}．
+原子やイオンが熱的に励起されて高いエネルギー準位へ遷移した後，固有の寿命 $\tau$ を経て，より低いエネルギー準位へ遷移する際に光を放出する過程である
+\cite{YamamotoMurayama1995,DaidojiNakahara1996,KinoshitaOtaNagaiMinami2015}。
+この過程により，原子やイオンの種類に固有の輝線スペクトルが形成される
+\cite{YamamotoMurayama1995,KinoshitaOtaNagaiMinami2015}。\\
 
-(3) 制動放射  
-自由電子がイオンのクーロン力を受けて減速，
-あるいは軌道を曲げられることで生じる発光であり，
-制動放射と呼ばれる．
-この発光は電子の運動エネルギーの連続的な変化に対応するため，
-連続スペクトルを生じる
-\cite{YamamotoMurayama1995,KinoshitaOtaNagaiMinami2015}．\\
-一般に，自然放射によって得られるスペクトル線の放射強度は，
-一方では与えられた振動数の放射を生じる量子的遷移確率により，
-他方では対応する励起状態にある原子数によって決定される．
-アークプラズマが熱平衡状態にあると仮定すると，
-励起された原子はボルツマン分布に従う．
-このとき，準位 $\mathrm{n}$ から $\mathrm{m}$ への遷移確率を $A_\mathrm{nm}$ とすると，
-特定のアークスペクトル線の放射強度 $I$ は次式で与えられる．
+(2) \textbf{再結合放射}  
+
+自由電子がイオンの束縛準位に捕獲される際，電子の自由状態（運動エネルギー）と束縛状態とのエネルギー差に相当する光を放出する現象である。
+この発光は再結合放射と呼ばれ，電子の運動エネルギーが連続的に分布しているため，連続スペクトルを形成する
+\cite{YamamotoMurayama1995,KinoshitaOtaNagaiMinami2015}。\\
+
+(3) \textbf{制動放射}  
+
+自由電子がイオンのクーロン力を受けて減速，あるいは進路を変えられる際に生じる発光である。
+この場合も電子の運動エネルギーが連続的に変化するため，連続スペクトルが観測される
+\cite{YamamotoMurayama1995,KinoshitaOtaNagaiMinami2015}。
+
+一般に，自然放射によるスペクトル線の放射強度は，量子力学的な遷移確率と，
+対応する励起状態に存在する粒子数によって決定される。
+アークプラズマが局所熱平衡（LTE）状態にあると仮定すると，
+励起原子数はボルツマン分布に従う。
+このとき，準位 $n$ から $m$ への遷移確率を $A_{nm}$ とすると，
+特定のスペクトル線の放射強度 $I$ は次式で与えられる。
+
 \begin{equation}
-I 
-=
- A_\mathrm{nm} h \nu_\mathrm{n}
-\frac{N_0 g_\mathrm{n}}{Z(T)}
-\exp\!\left(-\frac{E_\mathrm{n}}{kT}\right)
+I = \frac{A_{nm} h \nu_{nm} N_0 g_n}{Z(T)}
+\exp \left( -\frac{E_n}{kT} \right)
 \label{eq:line_intensity}
 \end{equation}
-ここで，
-$g_\mathrm{n}$ は統計的重み，
-$E_\mathrm{n}$ は励起エネルギー，
-$h$ はプランク定数，
-$\nu_\mathrm{n}$ は遷移に対応する振動数，
-$N_0$ は原子密度，
-$k$ はボルツマン定数，
-$T$ はアーク温度，
-$Z(T)$ は分配関数（状態和）である．
+
+ここで，$g_n$ は統計的重み，
+$E_n$ は励起エネルギー [J]，
+$h$ はプランク定数 [J$\cdot$s]，
+$\nu_{nm}$ は遷移に対応する振動数 [Hz]，
+$N_0$ は基底状態の原子密度 [m$^{-3}$]，
+$k$ はボルツマン定数 [J/K]，
+$T$ はアーク温度 [K]，
+$Z(T)$ は分配関数（状態和）である。
+
+
 
 \subsection{局所熱平衡}
 電子が電磁場から加速を受ける時間内において，
 電子と重粒子が弾性衝突により十分なエネルギー交換を行っていれば，
-電子の運動エネルギーは重粒子へと移行し，
-電子温度$T_\mathrm{e}$と重粒子温度$T_\mathrm{h}$はほぼ等しい値をとる．
-一方，十分なエネルギー交換が行われない場合には
-$T_\mathrm{e} \neq T_\mathrm{h}$ となり，いわゆる熱的非平衡状態が現れる．
-よく知られているように，電子温度$T_\mathrm{e}$ と重粒子温度$T_\mathrm{h}$の差を与える関係式は，
-強い対流やドリフト，高い電子温度勾配，強い放射などの影響が無視できる場合，
-定常・0 次元の電子エネルギー保存式，すなわち電子が電界から得るエネルギーが
-重粒子との弾性衝突によって失われるエネルギーに等しいとする関係から導かれる\cite{田中康規2006熱プラズマにおける非平衡性}．
+電子の運動エネルギーは重粒子へ移行し，
+電子温度 $T_{\mathrm{e}}$ と重粒子温度 $T_{\mathrm{h}}$ は
+ほぼ等しい値をとる。
+一方，エネルギー交換が十分に行われない場合には
+$T_{\mathrm{e}} \neq T_{\mathrm{h}}$ となり，
+いわゆる熱的非平衡状態が生じる。
+
+一般に，電子温度 $T_{\mathrm{e}}$ と重粒子温度 $T_{\mathrm{h}}$ の差を与える関係式は，
+強い対流やドリフト，急峻な温度勾配，および強い放射の影響が無視できる場合，
+定常かつ 0 次元近似の電子エネルギー保存式から導かれる。
+すなわち，電子が電界から得るエネルギーと，
+重粒子との弾性衝突によって失われるエネルギーが等しいとする
+エネルギー収支関係より，次式が得られる
+\cite{田中康規2006熱プラズマにおける非平衡性}。
+
 \begin{equation}
-\frac{T_\mathrm{e} - T_\mathrm{h}}{T_\mathrm{e}}
+\frac{T_{\mathrm{e}} - T_{\mathrm{h}}}{T_{\mathrm{e}}}
 =
-\frac{3 \pi}{32} 
+\frac{3 \pi}{32}
 \left(
-  \frac{e \, E \, \lambda_\mathrm{e}}{\frac{3}{2} \, k \, T_\mathrm{e}}
+\frac{e E \lambda_{\mathrm{e}}}{\frac{3}{2} k T_{\mathrm{e}}}
 \right)^2
-\frac{m_\mathrm{h}}{m_\mathrm{e}}
+\frac{m_{\mathrm{h}}}{m_{\mathrm{e}}}
 \label{eq:Te_Th}
 \end{equation}
 
-ここで，
-$e$ は素電荷，
-$m_e$ は電子の質量，
-$m_h$ は重粒子の質量，
-$\lambda_e$ は電子の平均自由行程，
-$k$ はボルツマン定数，
-$E$ は電界の大きさである．
-式 \eqref{eq:Te_Th}の左辺$(T_\mathrm{e} - T_\mathrm{h})/T_\mathrm{e}$は，
-電子と重粒子の温度差を表す無次元量であり，
-熱的平衡性の指標として用いられる．
-同式より，$T_\mathrm{e}$ と $T_\mathrm{h}$ が同程度の値となるためには，
-電子が重粒子との衝突間に電界から得るエネルギー$\mathrm{e}E\lambda_\mathrm{e}$が，
-電子のランダム運動（熱運動）エネルギー$\frac{3}{2}kT_\mathrm{e}$ に比べて十分小さいことが必要条件である．
-そのためには，$T_\mathrm{e}$ が大きいこと，$E$ が小さいこと，$\lambda_\mathrm{e}$ が小さいことなどが必要である．
-熱プラズマにおいては，
-温度が約$10{,}000~\mathrm{K}$ と高く，
-圧力も大気圧程度である場合が多い．
-このような条件下では，
-粒子間の衝突が十分に頻繁に起こるため，
-局所熱平衡状態が成立すると考えられている\cite{1520853832517707008}．
+ここで，$e$ は素電荷 [C]，
+$m_{\mathrm{e}}$ は電子の質量 [kg]，
+$m_{\mathrm{h}}$ は重粒子の質量 [kg]，
+$\lambda_{\mathrm{e}}$ は電子の平均自由行程 [m]，
+$k$ はボルツマン定数 [J/K]，
+$E$ は電界の強さ [V/m] である。
+式 \eqref{eq:Te_Th} の左辺は，
+電子と重粒子の温度差を規格化した無次元量であり，
+熱的平衡性の指標として用いられる。
+
+同式より，$T_{\mathrm{e}}$ と $T_{\mathrm{h}}$ が近似的に等しくなるためには，
+電子が平均自由行程 $\lambda_{\mathrm{e}}$ の間に
+電界から得るエネルギー $e E \lambda_{\mathrm{e}}$ が，
+電子の熱運動エネルギー $\frac{3}{2} k T_{\mathrm{e}}$
+に比べて十分に小さいことが必要条件となる。
+したがって，局所熱平衡が成立するためには，
+$T_{\mathrm{e}}$ が十分に高いこと，
+電界 $E$ が小さいこと，
+あるいは粒子密度が高く
+$\lambda_{\mathrm{e}}$ が小さいことなどが求められる。
+
+大気圧下のアークプラズマ等の熱プラズマにおいては，
+温度が $10{,}000\,\mathrm{K}$ 程度と高く，
+かつ粒子密度も高いため，
+粒子間の衝突が極めて頻繁に生じる。
+このような条件下ではエネルギー交換が十分に行われ，
+局所熱平衡（LTE）状態が概ね成立すると考えられている
+\cite{1520853832517707008}。
+
 
 \subsection{アーク温度測定法}
 発光分光による温度決定法の代表的なものには\textit{Fowler Milne 法}，\textit{二線強度比法}，\textit{ボルツマンプロット法}が挙げられる．  
@@ -730,23 +747,28 @@ Chapman-Enskog 法の第一近似を用いることにより，導電率は次�
 \chapter{実験手法}
 \section{実験装置}
 \subsection{気中開閉器}
-図\ref{fig:気中開閉器}に，本試験で使用した気中開閉器の内部構造を示す．
-本開閉器は EPP-25-102，SA-25-077，SP-25-019 で構成されている．
-可動電極は Cu 製（先端部は Cu--W 製），アーキング電極は Fe 製である．
+図\ref{fig:気中開閉器}に，本試験で使用した気中開閉器の内部構造を示す。
+本開閉器は EPP-25-102，SA-25-077，SP-25-019 により構成されている。
+可動電極は Cu 製（先端部は Cu--W 製），
+アーキング電極は Fe 製である。
 可動電極と Cu 製固定電極が接触した状態から遮断動作が開始されると，
-可動電極は下方に回動して接点が引き離され，電極間にアークが発生する．
-発生したアークは，可動電極とアーキング電極間に移行し，遮断完了まで維持される．
+可動電極は下方に回動して接点が引き離され，
+電極間にアークが発生する。
+発生したアークは，可動電極とアーキング電極間へ移行し，
+遮断完了まで維持される。
 
-消弧室内の消弧グリッドは，板状の鉄製消弧板と
-POM（ポリオキシメチレン）製絶縁板とを一定の間隔で交互に配置した
-積層構造を有する．
-アークは消弧板に接触しながら分割され，その際に発生した熱エネルギーにより
-周囲気体および消弧材料が高温ガス化する．
-生成された高温ガスは，図中橙色で示した領域に向かって噴出・滞留する．
-
-\begin{figure}[tb]
+消弧室内の消弧グリッドは，
+板状の鉄製消弧板と
+POM（ポリオキシメチレン）製絶縁板とを
+一定間隔で交互に配置した積層構造を有する。
+アークは消弧板に接触しながら分割され，
+その際に発生した熱エネルギーにより，
+周囲気体および消弧材料が高温ガス化する。
+生成された高温ガスは，
+図中橙色で示した領域に向かって噴出・滞留する。
+\begin{figure}[H]
   \centering
-  \includegraphics[width=0.6\linewidth]{気中開閉器.png}
+  \includegraphics[width=\linewidth]{気中開閉器.png}
   \caption{気中開閉器の内部構造}
   \label{fig:気中開閉器}
 \end{figure}
@@ -765,14 +787,12 @@ JIS C 4605 に準拠した試験手法により実施した．
 これらの測定結果をもとに，
 電源側および負荷側の電位差の差分を算出することで，
 同相（試験相）における電極間電圧を求めた．
-
-\begin{figure}[tb]
+\begin{figure}[H]
   \centering
   \includegraphics[width=0.6\linewidth]{試験回路.png}
   \caption{試験回路構成}
   \label{fig:試験回路}
 \end{figure}
-\FloatBarrier
 
 \subsection{メモリハイコーダー}
 動作中の電流および電圧の測定には，MR6000-01 を使用した．
@@ -784,40 +804,39 @@ JIS C 4605 に準拠した試験手法により実施した．
 得られた電源側および負荷側の電位差から差分を算出することで，
 同相（試験相）における電極間電圧を観測した．
 
-\begin{table}[tb]
+\begin{table}[H]
   \centering
   \caption{メモリハイコーダの規格}
   \label{tab:メモハイ表}
   \includegraphics[width=0.8\linewidth]{メモハイ表.png}
 \end{table}
-\FloatBarrier
-\begin{figure}[tb]
+
+\begin{figure}[H]
   \centering
-  \includegraphics[width=0.6\linewidth]{メモハイ画像.png}
+  \includegraphics[width=0.5\linewidth]{メモハイ画像.png}
   \caption{メモハイ画像}
   \label{fig:メモハイ画像}
 \end{figure}
-\FloatBarrier
+
 
 \subsection{高速度カメラ}
 2 次元分光画像解析を行うため，高速度カメラを用いて撮影を行った．
 表\ref{tab:高速度カメラ表}にその主な仕様を，
 図\ref{fig:高速度カメラ}に高速度カメラの外観を示す．
 
-\begin{table}[tb]
+\begin{table}[H]
   \centering
   \caption{高速度カメラの仕様}
   \label{tab:高速度カメラ表}
   \includegraphics[width=0.8\linewidth]{高速度カメラ表.png}
 \end{table}
-\FloatBarrier
-\begin{figure}[tb]
+
+\begin{figure}[H]
   \centering
-  \includegraphics[width=0.6\linewidth]{高速度カメラ.png}
+  \includegraphics[width=0.5\linewidth]{高速度カメラ.png}
   \caption{高速度カメラの外観}
   \label{fig:高速度カメラ}
 \end{figure}
-\FloatBarrier
 
 \subsection{パルスジェネレーター}
 電流・電圧波形と高速度カメラ v2512，ならびに簡易分光器の
@@ -831,20 +850,20 @@ TTL 信号を出力することで，
 
 パルスジェネレータの外観を図\ref{fig:パルジェネ}に示す．
 
-\begin{table}[tb]
+\begin{table}[H]
   \centering
   \caption{パルスジェネレーターの仕様}
   \label{tab:パルジェネ表}
   \includegraphics[width=0.8\linewidth]{パルジェネ表.png}
 \end{table}
-\FloatBarrier
-\begin{figure}[tb]
+
+\begin{figure}[H]
   \centering
-  \includegraphics[width=0.6\linewidth]{パルジェネ.png}
+  \includegraphics[width=0.5\linewidth]{パルジェネ.png}
   \caption{パルスジェネレーターの外観}
   \label{fig:パルジェネ}
 \end{figure}
-\FloatBarrier
+
 
 \subsection{狭帯域フィルタ}
 
@@ -855,14 +874,13 @@ TTL 信号を出力することで，
 TECH SPEC 社製，直径 50\,mm のハードコートフィルタである．
 この場合，中心波長以外の成分の透過率は 0.01\% 以下となる．
 
-\begin{table}[tb]
+\begin{table}[H]
   \centering
   \caption{狭帯域フィルタの商品コード}
   \label{tab:フィルタ}
   \includegraphics[width=0.8\linewidth]{フィルタ.png}
 \end{table}
-\FloatBarrier
-
+\clearpage
 \section{分光画像センサー}
 \subsection{概略}
 局所熱平衡（Local Thermodynamic Equilibrium：LTE）仮定のもと，
@@ -922,29 +940,26 @@ $13.3\,\mu\mathrm{s}$ として
 画像取得を行った．
 
 
-\begin{figure}[tb]
+\begin{figure}[H]
   \centering
-  \includegraphics[width=0.6\linewidth]{発光スペクトル.png}
+  \includegraphics[width=0.7\linewidth]{発光スペクトル.png}
   \caption{発光分光スペクトル}
   \label{fig:発光スペクトル}
 \end{figure}
-\FloatBarrier
 
-\begin{figure}[tb]
+\begin{figure}[H]
   \centering
   \includegraphics[width=0.6\linewidth]{フローチャート.png}
   \caption{スペクトル解析のフローチャート}
   \label{fig:フローチャート}
 \end{figure}
-\FloatBarrier
 
-\begin{figure}[tb]
+\begin{figure}[H]
   \centering
-  \includegraphics[width=0.6\linewidth]{分光センサ.png}
+  \includegraphics[width=0.8\linewidth]{分光センサ.png}
   \caption{分光画像センサー}
   \label{fig:分光センサ}
 \end{figure}
-\FloatBarrier
 
 \subsection{アーク温度}
 
@@ -1033,14 +1048,14 @@ $T$ が複数の値を取りうるため，
 
 
 
-\begin{figure}[tb]
+\begin{figure}[H]
   \centering
-  \includegraphics[width=0.6\linewidth]{放射係数比と温度.png}
+  \includegraphics[width=0.7\linewidth]{放射係数比と温度.png}
   \caption{放射係数比 $\varepsilon_{640}/\varepsilon_{650}$ とプラズマ温度 $T$ の関係
 }
   \label{fig:放射係数比と温度}
 \end{figure}
-\FloatBarrier
+
 
 \subsection{鉄蒸気混入率}
 
@@ -1076,23 +1091,21 @@ $X_{\mathrm{Fe}} = 10^{-4}$ の場合を考えると，
 鉄蒸気混入率の算定精度は
 おおよそ $\pm 1$ 桁程度となる．
 
-\begin{figure}[tb]
+\begin{figure}[H]
   \centering
-  \includegraphics[width=0.6\linewidth]{粒子組成.png}
+  \includegraphics[width=0.7\linewidth]{粒子組成.png}
   \caption{鉄蒸気混入空気の熱平衡粒子組成
   （$1\,\mathrm{bar}$，$X_{\mathrm{Fe}} = 10^{-5}$）}
   \label{fig:粒子組成}
 \end{figure}
-\FloatBarrier
 
-\begin{figure}[tb]
+\begin{figure}[H]
   \centering
-  \includegraphics[width=0.6\linewidth]{組成温度特性.png}
+  \includegraphics[width=0.8\linewidth]{組成温度特性.png}
   \caption{プラズマ温度 $T$ と放射係数比
   $\varepsilon_{640}/\varepsilon_{777}$ の関係}
   \label{fig:組成温度特性}
 \end{figure}
-\FloatBarrier
 
 \subsection{導電率} 
 
@@ -1134,15 +1147,14 @@ $\sigma = 10^{3}\,\mathrm{S/m}$ と算定された場合，
 導電率の算定精度は
 おおよそ $\pm 1$ 桁程度となる．
 
-\begin{figure}[tb]
+\begin{figure}[H]
   \centering
-  \includegraphics[width=0.6\linewidth]{導電率.png}
+  \includegraphics[width=0.8\linewidth]{導電率.png}
   \caption{鉄蒸気混入空気の導電率 $\sigma$（$p = 1\,\mathrm{bar}$）}
   \label{fig:導電率}
 \end{figure}
-\FloatBarrier
-
 \clearpage
+
 
 % --- 第4章 ---
 \chapter{実験結果と考察}
@@ -1166,6 +1178,13 @@ $\sigma = 10^{3}\,\mathrm{S/m}$ と算定された場合，
 再発弧時のアーク経路の変化，過渡回復電圧の強度，
 および電極間に形成される絶縁層の有無に基づいて行った．
 
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.7\linewidth]{ゼロ点時間定義.png}
+  \caption{ゼロ点時間の定義 }
+  \label{fig:ゼロ点時間定義}
+\end{figure}
+
 表\ref{tab:zc_classification}に，実施した全試験結果について，
 ゼロ点時間ごとの再発弧の分類を示す．
 なお，零点時間が $0\sim3\,\mathrm{ms}$ の区間では，
@@ -1179,15 +1198,7 @@ $\sigma = 10^{3}\,\mathrm{S/m}$ と算定された場合，
 このため，本稿では主として熱的再発弧に着目し，
 その発生要因について検討を行う．
 
-\begin{figure}[tb]
-  \centering
-  \includegraphics[width=0.6\linewidth]{ゼロ点時間定義.png}
-  \caption{ゼロ点時間の定義 }
-  \label{fig:ゼロ点時間定義}
-\end{figure}
-\FloatBarrier
-
-\begin{table}[t]
+\begin{table}[H]
  \centering
  \caption{ゼロ点時間ごとの再発弧の分類}
  \label{tab:zc_classification}
@@ -1202,13 +1213,12 @@ $\sigma = 10^{3}\,\mathrm{S/m}$ と算定された場合，
   6--7     & 19 & 8  & 9   & 2   \\
   7--8     & 18 & 11 & 5   & 2   \\
   8--半波  & 9  & 6  & 3   & 0   \\
-  \hline
   第二ゼロ点以降遮断 & 5 & 0 & 4 & 1 \\
   \hline
  \end{tabular}
 \end{table}
 
-
+\clearpage
 \section{遮断時間の分類}
 \label{sec:遮断時間の分類}
 \ref{sec:再発弧の分類}項において，ゼロ点時間を定義した．
@@ -1219,8 +1229,7 @@ $\sigma = 10^{3}\,\mathrm{S/m}$ と算定された場合，
 第一電流零点で遮断失敗が生じやすい．
 
 以上の観点から，本研究では，
-ゼロ点時間が短いにもかかわらず遮断に成功したケース
-（すなわちアーク時間が短いケース）を「短時間遮断」と定義する．
+ゼロ点時間が短いにもかかわらず遮断に成功したケースを「短時間遮断」と定義する．
 第一電流零点での遮断に失敗した場合，
 遮断機会は次の電流零点まで持ち越され，
 その間アーク放電は持続する．
@@ -1237,14 +1246,13 @@ $15\,\mathrm{ms}$ 以上の場合を「長時間遮断」とし，
 アーク時間に対する遮断成否およびアークスポット位置を整理した．
 
 
-\begin{table}[tb]
+\begin{table}[H]
   \centering
-  \caption{ゼロ点時間に基づく遮断時間とスポット位置の分類}
+  \caption{ゼロ点時間に基づく遮断時間とスポット位置の分類　　　}
   \label{tab:遮断性能表}
   \includegraphics[width=0.8\linewidth]{遮断性能表.png}
 \end{table}
-\FloatBarrier
-
+\clearpage
 \subsection{アークスポットとの相関}
 \label{sec:アークスポットとの相関}
 遮断時間の分類に基づき，
@@ -1254,15 +1262,15 @@ $15\,\mathrm{ms}$ 以上の場合を「長時間遮断」とし，
 可動電極上端面との最短距離を
 「アークスポット距離」と定義し，比較を行った．
 
-その結果，短時間遮断では，
+その結果，特に短時間遮断では，
 アークスポット距離が長くなる傾向が認められた．
 一方，長時間遮断では，
 第一電流零点においてアークスポットが
 可動電極右上付近に集中する傾向が確認された．
 さらに，表\ref{tab:遮断性能表}に示す
-アークスポット位置分布より，
-$15$～$20\,\mathrm{mm}$ といった比較的遠方にスポットが形成された割合は，
-短時間遮断において有意に高いことが分かる．
+アークスポット位置分布からは，
+$15$～$20\,\mathrm{mm}$ といった比較的遠方にスポットが形成された割合が，
+短時間遮断において有意に高いことが示されている．
 これらの結果は，
 アークスポット距離が長くなるほど，
 遮断成功に寄与する可能性を示唆している．
@@ -1287,6 +1295,33 @@ $15$～$20\,\mathrm{mm}$ といった比較的遠方にスポットが形成さ�
 各ケースのゼロ点時間は，
 それぞれ $6.45\,\mathrm{ms}$ および $6.34\,\mathrm{ms}$ である．
 
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.6\linewidth]{ゼロ点時間とアーク時間の関係性.png}
+  \caption{ゼロ点時間とアーク時間の関係性 }
+  \label{fig:ゼロ点時間とアーク時間の関係性}
+\end{figure}
+
+
+\begin{figure}[H]
+	\centering
+	\begin{subfigure}[b]{0.48\columnwidth}
+		\centering
+		\includegraphics[width=0.8\linewidth]{ケースaIV.png}
+		\subcaption{ケースa　　}
+		\label{fig:ケースaIV}
+	\end{subfigure}
+	\hfill
+	\begin{subfigure}[b]{0.48\columnwidth}
+		\centering
+		\includegraphics[width=0.8\linewidth]{ケースbIV.png}
+		\subcaption{ケースb　　}
+		\label{fig:ケースbIV}
+	\end{subfigure}
+	\caption{電流ゼロ点直前の電流と電位差}
+	\label{fig:電流ゼロ点直前の電流と電位差}
+\end{figure}
+
 図\ref{fig:電流ゼロ点直前のアーク発光比較}(a)，(b)より，
 アーキング電極―可動電極間のスポット距離は，
 それぞれ $20.2\,\mathrm{mm}$ および $43.2\,\mathrm{mm}$ であり，
@@ -1298,83 +1333,46 @@ $15$～$20\,\mathrm{mm}$ といった比較的遠方にスポットが形成さ�
 スポット距離が長いケース(b)の方が
 顕著に低温であることが確認された．
 同様に，
-図\ref{fig:電流ゼロ点直前のアーク温度・導電率比較}(a2)，(b2)に示す導電率分布では，
+図\ref{fig:電流ゼロ点直前のアーク温度・導電率比較}(a2)，(b2)に示す導電率分布においても，
 ケース(a)が $10^{-1}$～$10^{3.5}\,\mathrm{S/m}$，
-ケース(b)が $10^{-1}$～$10^{2}\,\mathrm{S/m}$ の範囲に分布している．
+ケース(b)が $10^{-1}$～$10^{2}\,\mathrm{S/m}$ の範囲にある．
 
-以上より，
-アークスポット距離が長くなることでアークが伸長し，
-アーク抵抗が増大した結果，
-導電率が低く抑制されると考えられる．
-その結果，
-電流零点直後に過渡回復電圧により注入される
-ジュールエネルギーが低減され，
-熱的再発弧が抑制され，
-遮断に成功したものと推察される．
+したがって，アークスポットの距離が長くなることでアークが伸長しアーク抵抗が上昇した結果，
+導電率が低く抑えられ，電流ゼロ点直後に注入される過渡回復電圧起因のジュールエネルギーも小さくなり熱的遮断に成功したものと考えられる。
 さらに，図\ref{fig:電流ゼロ点直前のアーク温度・導電率比較}に示すように，
-スポット距離が長い場合には，
-スポットとアーキング電極間に
-温度が $4000\,\mathrm{K}$ 未満の低温領域，
-すなわち絶縁層が形成されやすく，
-誘電的観点からも遮断に有利であると考えられる．
+スポット距離が長くなるこ
+とでスポットとアーキング電極間に温度が $4000\,\mathrm{K}$ 未満の絶縁層も形成されやすくなり，
+誘電的遮断にも成功しやすくなったと考えられる。
 
 また，本実験器における可動電極先端は
 Cu--W（銅・タングステン合金）製であるため，
 アークスポット形成位置により電極材料が異なる．
-ケース(a)では主として Cu--W 上に，
+具体的に，ケース(a)では主として Cu--W 上に，
 ケース(b)では Cu 上にスポットが形成されている．
 タングステンは銅と比較して融点が高く，
 融解・蒸発に伴う潜熱による冷却効果が小さいことから，
-これらの材料特性の差異も，
-アーク温度低下に寄与した一因であると考えられる．
+これらの材料特性の差異も，アーク温度低下に寄与した一因であると考えられる．
 
-\begin{figure}[tb]
-  \centering
-  \includegraphics[width=0.6\linewidth]{ゼロ点時間とアーク時間の関係性.png}
-  \caption{ゼロ点時間とアーク時間の関係性 }
-  \label{fig:ゼロ点時間とアーク時間の関係性}
-\end{figure}
-\FloatBarrier
-
-\begin{figure}[htbp]
-	\centering
-	\begin{subfigure}[b]{0.48\columnwidth}
-		\centering
-		\includegraphics[width=0.8\linewidth]{ケースaIV.png}
-		\subcaption{ケースa　　　}
-		\label{fig:ケースaIV}
-	\end{subfigure}
-	\hfill
-	\begin{subfigure}[b]{0.48\columnwidth}
-		\centering
-		\includegraphics[width=0.8\linewidth]{ケースbIV.png}
-		\subcaption{ケースb　　　}
-		\label{fig:ケースbIV}
-	\end{subfigure}
-	\caption{電流ゼロ点直前の電流と電位差}
-	\label{fig:電流ゼロ点直前の電流と電位差}
-\end{figure}
-
-\begin{figure}[htbp]
+\begin{figure}[H]
 	\centering
 	\begin{subfigure}[b]{0.48\columnwidth}
 		\centering
 		\includegraphics[width=0.8\linewidth]{ケースaEmission.png}
-		\subcaption{ケースa　　　}
+		\subcaption{ケースa}
 		\label{fig:ケースaEmission}
 	\end{subfigure}
 	\hfill
 	\begin{subfigure}[b]{0.48\columnwidth}
 		\centering
 		\includegraphics[width=0.8\linewidth]{ケースbEmission.png}
-		\subcaption{ケースb　　　}
+		\subcaption{ケースb}
 		\label{fig:ケースbEmission}
 	\end{subfigure}
-	\caption{a,bにおける電流ゼロ点直前の電流と電位差}
+	\caption{ケースa,bにおける電流ゼロ点直前の電流と電位差}
 	\label{fig:電流ゼロ点直前のアーク発光比較}
 \end{figure}
 
-\begin{figure}[tb]
+\begin{figure}[H]
   \centering
   % --- 上段 ---
   \begin{subfigure}{0.45\linewidth}
