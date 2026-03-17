@@ -1,0 +1,281 @@
+\begin{thebibliography}{43}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[九州電力送配電(2023)]{kyuden_tandd}
+九州電力送配電.
+\newblock 電力供給の取り組み.
+\newblock \url{https://www.kyuden.co.jp/td_supply_effort_flow.html}, 2023.
+
+\bibitem[小田切司朗(2009)]{小田切司朗2009配電自動化の変遷}
+小田切司朗.
+\newblock 配電自動化の変遷.
+\newblock \emph{電気学会誌}, 129\penalty0 (9):\penalty0 620--623, 2009.
+
+\bibitem[{石谷卓也，原亮一，北裕幸，小暮英二，三栗祐己，神谷英志}(2012)]{石谷卓也2012センサ付開閉器の負荷情報を活用した配電系統のオンライン構成変更}
+{石谷卓也，原亮一，北裕幸，小暮英二，三栗祐己，神谷英志}.
+\newblock
+  センサ付開閉器の負荷情報を活用した配電系統のオンライン構成変更.
+\newblock \emph{電気学会論文誌 B (電力・エネルギー部門誌)},
+  132\penalty0 (10):\penalty0 853--861, 2012.
+
+\bibitem[{渋谷正豊，黒沢幸夫}(1987)]{渋谷正豊1987第}
+{渋谷正豊，黒沢幸夫}.
+\newblock 第9章 アーク制御電力保護機器.
+\newblock \emph{電気学会雜誌}, 107\penalty0 (11):\penalty0 1141--1144,
+  1987.
+
+\bibitem[Nowlen et~al.(2008)Nowlen, Brown, and Wyant]{nowlen2008high}
+Steven~Patrick Nowlen, Jason~W Brown, and Francis~John Wyant.
+\newblock High energy arcing fault fires in switchgear equipment: a literature
+  review.
+\newblock 2008.
+
+\bibitem[Freton and Gonzalez(2009)]{freton2009overview}
+Pierre Freton and Jean-Jacques Gonzalez.
+\newblock Overview of current research into low-voltage circuit breakers.
+\newblock \emph{Open Plasma Physics Journal}, 2:\penalty0 105--119, 2009.
+
+\bibitem[McBride and Weaver(2001)]{mcbride2001review}
+JW~McBride and PM~Weaver.
+\newblock Review of arcing phenomena in low voltage current limiting circuit
+  breakers.
+\newblock \emph{IEE Proceedings-Science, Measurement and Technology},
+  148\penalty0 (1):\penalty0 1--7, 2001.
+
+\bibitem[Onchi et~al.(2012)Onchi, Tanaka, and Uesugi]{onchi2012effect}
+Toshiyuki Onchi, Yasunori Tanaka, and Yoshihiko Uesugi.
+\newblock Effect of polymer ablation gas on arc quenching properties around
+  current zero.
+\newblock \emph{Electrical Engineering in Japan}, 180\penalty0 (3):\penalty0
+  32--45, 2012.
+
+\bibitem[Nakagawa et~al.(2015)Nakagawa, Nakano, Tanaka, Uesugi, and
+  Ishijima]{nakagawa2015numerical}
+Takuya Nakagawa, Tomoyuki Nakano, Yasunori Tanaka, Yoshihiko Uesugi, and Tatsuo
+  Ishijima.
+\newblock Numerical simulation on dynamics and thermal decomposition of
+  spallation polymer particles flying in polymer ablated arcs.
+\newblock \emph{IEEJ Transactions on Power and Energy}, 135\penalty0
+  (11):\penalty0 681--687, 2015.
+
+\bibitem[Hiraide et~al.(2025)Hiraide, Saitsu, Yamaguchi, and
+  Inada]{hiraide2025two}
+Yunosuke Hiraide, Akio Saitsu, Naoya Yamaguchi, and Yuki Inada.
+\newblock Two-dimensional spectroscopic measurement of hot air gas and residual
+  arc for applicability examination of thermal and dielectric reignition theory
+  in air switchgear installing splitter plate.
+\newblock \emph{Journal of Physics D: Applied Physics}, 58\penalty0
+  (34):\penalty0 345206, 2025.
+
+\bibitem[Roininen et~al.(2009)Roininen, S{\"o}lver, Nordli, Bosma, Jonsson, and
+  Alfredsson]{abb_livetank_2009}
+T.~Roininen, C.~E. S{\"o}lver, H.~Nordli, A.~Bosma, P.~Jonsson, and
+  A.~Alfredsson.
+\newblock Live tank circuit breakers, application guide.
+\newblock Technical report, ABB AB High Voltage Products, 2009.
+
+\bibitem[吉岡芳夫(2006)]{吉岡芳夫2006電力用遮断器の現状と将来}
+吉岡芳夫.
+\newblock 電力用遮断器の現状と将来.
+\newblock \emph{電気学会論文誌 B (電力・エネルギー部門誌)},
+  126\penalty0 (7):\penalty0 653--656, 2006.
+
+\bibitem[電気学会(1965)]{IEEJ1965}
+電気学会.
+\newblock \emph{遮断器・開閉器}.
+\newblock 電気学会大学講座. 電気学会, 1965.
+
+\bibitem[{電子情報通信学会}(1992)]{IEICE1992}
+{電子情報通信学会}.
+\newblock \emph{電気エネルギー工学}.
+\newblock コロナ社, 1992.
+
+\bibitem[横水康伸(1991)]{横水康伸1991ガス吹付けによる大電流のアーク遮断に関する基礎研究}
+横水康伸.
+\newblock
+  ガス吹付けによる大電流のアーク遮断に関する基礎研究.
+\newblock 1991.
+
+\bibitem[義映(1991)]{Nakano1991}
+中野 義映.
+\newblock \emph{高電圧工学}.
+\newblock オーム社, 1991.
+
+\bibitem[Bussiere(2012)]{bussiere2012electric}
+William Bussiere.
+\newblock Electric fuses operation, a review: 1. pre-arcing period.
+\newblock In \emph{IOP Conference Series: Materials Science and Engineering},
+  volume~29, page 012001. IOP Publishing, 2012.
+
+\bibitem[電気学会放電ハンドブック出版委員会()]{IEEJ_Discharge_Handbook_1}
+電気学会放電ハンドブック出版委員会.
+\newblock \emph{放電ハンドブック}, volume 上巻.
+\newblock 電気学会.
+
+\bibitem[森田公(1985)]{森田公1985交流電流零点前消弧ピークの発生条件に関する考察}
+森田公.
+\newblock
+  交流電流零点前消弧ピークの発生条件に関する考察.
+\newblock \emph{電気学会論文誌. B}, 105\penalty0 (11):\penalty0
+  965--971, 1985.
+
+\bibitem[{菅泰雄，蓮井淳}(1988)]{菅泰雄1988高圧ヘリウム雰囲気中におけるアークの特性について}
+{菅泰雄，蓮井淳}.
+\newblock
+  高圧ヘリウム雰囲気中におけるアークの特性について.
+\newblock \emph{溶接学会論文集}, 6\penalty0 (1):\penalty0 86--91, 1988.
+
+\bibitem[水嶋(1983)]{BN05571456}
+水嶋.
+\newblock \emph{開閉装置・避雷器}.
+\newblock 電気・電子工学大百科事典. 電気書院, 1983.
+
+\bibitem[電気学会通信教育会(1975)]{IEEJ_CB_1975}
+電気学会通信教育会.
+\newblock \emph{電力用しゃ断器}.
+\newblock 社団法人電気学会, 1975.
+\newblock pp.~159, 1, 18--31, 87, 124, 152--153, 239--249, 292.
+
+\bibitem[柳父(2000)]{Yanabu2000}
+柳父.
+\newblock \emph{高電圧大電流工学}.
+\newblock オーム社, 2000.
+\newblock pp.~92--109.
+
+\bibitem[Bo et~al.(2017)Bo, Zhou, and Zhai]{bo2017investigation}
+Kai Bo, Xue Zhou, and Guofu Zhai.
+\newblock Investigation on arc dwell and restriking characteristics in dc
+  high-power relay.
+\newblock \emph{IEEE Transactions on Plasma Science}, 45\penalty0 (6):\penalty0
+  1032--1042, 2017.
+
+\bibitem[日高(2009)]{Hidaka2009}
+日高.
+\newblock \emph{高電圧工学}.
+\newblock 数理工学社, 2009.
+\newblock pp.~179--184.
+
+\bibitem[斉藤仁(2009)]{斉藤仁2009真空遮断器の最近の動向}
+斉藤仁.
+\newblock 真空遮断器の最近の動向.
+\newblock \emph{Journal of the Vacuum Society of Japan}, 52\penalty0
+  (7):\penalty0 383--387, 2009.
+
+\bibitem[大久保仁(2003)]{大久保仁2003環境低負荷の真空遮断器}
+大久保仁.
+\newblock 環境低負荷の真空遮断器 (vcb) 高電圧化技術動向.
+\newblock \emph{電気学会論文誌 B (電力・エネルギー部門誌)},
+  123\penalty0 (2):\penalty0 129--132, 2003.
+
+\bibitem[{山本，村山}(1995)]{YamamotoMurayama1995}
+{山本，村山}.
+\newblock \emph{プラズマの分光計測}.
+\newblock 学会出版センター, 1995.
+\newblock p.~4.
+
+\bibitem[平岡和雄(1993)]{平岡和雄1993混合ガスシールドアークプラズマの発光分光特性とその解析}
+平岡和雄.
+\newblock
+  混合ガスシールドアークプラズマの発光分光特性とその解析.
+\newblock \emph{溶接学会論文集}, 11\penalty0 (1):\penalty0 68--74, 1993.
+
+\bibitem[{鹿野竜大，根本雄介，真栄田義史，山本真司，岩尾徹}(2019)]{鹿野竜大2019マイクロ秒分光計測を用いたアーク温度計測}
+{鹿野竜大，根本雄介，真栄田義史，山本真司，岩尾徹}.
+\newblock マイクロ秒分光計測を用いたアーク温度計測.
+\newblock \emph{電気学会論文誌 B (電力・エネルギー部門誌)},
+  139\penalty0 (10):\penalty0 629--635, 2019.
+
+\bibitem[{大道寺，中原}(1996)]{DaidojiNakahara1996}
+{大道寺，中原}.
+\newblock \emph{原子スペクトル 測定とその応用}.
+\newblock 学会出版センター, 1996.
+\newblock p.~25.
+
+\bibitem[{木下，太田，永井，南}(2015)]{KinoshitaOtaNagaiMinami2015}
+{木下，太田，永井，南}.
+\newblock \emph{発光の辞典 基礎からイメージングまで}.
+\newblock 朝倉書店, 2015.
+\newblock pp.~229--230.
+
+\bibitem[{田中康規，渡辺隆行}(2006)]{田中康規2006熱プラズマにおける非平衡性}
+{田中康規，渡辺隆行}.
+\newblock
+  \emph{熱プラズマにおける非平衡性（〈小特集〉材料プロセッシングを支える熱プラズマの新展開）}.
+\newblock PhD thesis, Kanazawa University, 2006.
+
+\bibitem[{横水康伸，松村年郎，田中康規}(2006)]{1520853832517707008}
+{横水康伸，松村年郎，田中康規}.
+\newblock 2.
+  熱プラズマの熱力学・輸送・放射特性（〈小特集〉材料プロセッシングを支える熱プラズマの新展開）.
+\newblock \emph{プラズマ・核融合学会誌 = Journal of plasma and
+  fusion research}, 82\penalty0 (8):\penalty0 472--478, 08 2006.
+\newblock ISSN 09187928.
+\newblock URL \url{https://cir.nii.ac.jp/crid/1520853832517707008}.
+
+\bibitem[平岡和雄(1998)]{平岡和雄1998アークプラズマの分光計測}
+平岡和雄.
+\newblock アークプラズマの分光計測.
+\newblock \emph{溶接学会誌}, 67\penalty0 (8):\penalty0 600--605, 1998.
+
+\bibitem[{平岡和雄，塩飽孝至，黄地尚義}(1996)]{平岡和雄1996各種分光法によるアークプラズマの温度評価}
+{平岡和雄，塩飽孝至，黄地尚義}.
+\newblock 各種分光法によるアークプラズマの温度評価.
+\newblock \emph{溶接学会論文集}, 14\penalty0 (4):\penalty0 641--648,
+  1996.
+
+\bibitem[{作田忠裕，鬼頭幸生，宮地巌}(1978)]{作田忠裕1978銅蒸気混入による高温空気中の電子密度の増大}
+{作田忠裕，鬼頭幸生，宮地巌}.
+\newblock 銅蒸気混入による高温空気中の電子密度の増大.
+\newblock \emph{電気学会論文誌. A}, 98\penalty0 (4):\penalty0 209--214,
+  1978.
+
+\bibitem[Inada et~al.(2014)Inada, Abe, Kumada, Hidaka, Amano, Itoh, and
+  Oono]{inada2014temperature}
+Y~Inada, K~Abe, A~Kumada, K~Hidaka, K~Amano, K~Itoh, and T~Oono.
+\newblock Temperature of hydrogen radio frequency plasma under dechlorination
+  process of polychlorinated biphenyls.
+\newblock \emph{Applied Physics Letters}, 105\penalty0 (17), 2014.
+
+\bibitem[Kumada et~al.(2019)Kumada, Nagata, Hidaka, Watanabe, and
+  Kokura]{kumada2019two}
+Akiko Kumada, Taiga Nagata, Kunihiko Hidaka, Shinya Watanabe, and Kentaro
+  Kokura.
+\newblock Two-dimensional temperature distribution of air arc commutating to
+  arc runner.
+\newblock \emph{Plasma Sources Science and Technology}, 28\penalty0
+  (9):\penalty0 095013, 2019.
+
+\bibitem[Boulos et~al.(2013)Boulos, Fauchais, and Pfender]{boulos2013thermal}
+M.~I. Boulos, P.~Fauchais, and E.~Pfender.
+\newblock \emph{Thermal Plasmas: Fundamentals and Applications}.
+\newblock Springer Science, New York, 2013.
+
+\bibitem[Tanaka et~al.(2008)Tanaka, Yamachi, Matsumoto, Kaneko, Okabe, and
+  Shibuya]{tanaka2008thermodynamic}
+Yasunori Tanaka, Nobuhiko Yamachi, Shinji Matsumoto, Shuhei Kaneko, Shigemitsu
+  Okabe, and Masatoyo Shibuya.
+\newblock Thermodynamic and transport properties of co2, co2--o2, and co2--h2
+  mixtures at temperatures of 300 to 30,000 k and pressures of 0.1 to 10 mpa.
+\newblock \emph{Electrical Engineering in Japan}, 163\penalty0 (4):\penalty0
+  18--29, 2008.
+
+\bibitem[{National Institute of Standards and Technology}()]{nist_asd}
+{National Institute of Standards and Technology}.
+\newblock Atomic spectra database.
+\newblock \url{http://www.nist.gov/pml/data/asd.cfm}.
+\newblock Physical Measurement Laboratory.
+
+\bibitem[Nakano et~al.(2021)Nakano, Tanaka, Ishijima, Nagai, and
+  Inenaga]{nakano2021numerical}
+Yusuke Nakano, Yasunori Tanaka, Tatsuo Ishijima, Daiki Nagai, and Kentaro
+  Inenaga.
+\newblock Numerical prediction on arc characteristics for various polymer
+  materials during polymer-ablated arc ignition process.
+\newblock \emph{IEEJ Transactions on Power and Energy}, 141\penalty0
+  (11):\penalty0 687--694, 2021.
+
+\end{thebibliography}

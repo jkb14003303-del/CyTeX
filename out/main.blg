@@ -1,0 +1,54 @@
+This is upBibTeX, Version 0.99d-j0.33-u1.27 (utf8.uptex) (TeX Live 2022/dev/Debian)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: main.aux
+The style file: unsrtnat.bst
+Database file #1: reference.bib
+Warning--empty journal in nowlen2008high
+Warning--empty journal in 横水康伸1991ガス吹付けによる大電流のアーク遮断に関する基礎研究
+Warning--can't use both volume and number fields in bussiere2012electric
+Warning--empty year in IEEJ_Discharge_Handbook_1
+Warning--empty year in IEEJ_Discharge_Handbook_1
+Warning--empty year in nist_asd
+You've used 43 entries,
+            2481 wiz_defined-function locations,
+            828 strings with 12357 characters,
+and the built_in function-call counts, 14621 in all, are:
+= -- 1259
+> -- 573
+< -- 35
++ -- 254
+- -- 168
+* -- 1018
+:= -- 2343
+add.period$ -- 141
+call.type$ -- 43
+change.case$ -- 74
+chr.to.int$ -- 43
+cite$ -- 49
+duplicate$ -- 811
+empty$ -- 1455
+format.name$ -- 215
+if$ -- 3097
+int.to.chr$ -- 1
+int.to.str$ -- 44
+missing$ -- 51
+newline$ -- 232
+num.names$ -- 129
+pop$ -- 373
+preamble$ -- 1
+purify$ -- 43
+quote$ -- 0
+skip$ -- 463
+stack$ -- 0
+substring$ -- 631
+swap$ -- 101
+text.length$ -- 3
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 265
+warning$ -- 6
+while$ -- 130
+width$ -- 0
+write$ -- 570
+is.kanji.str$ -- 0
+(There were 6 warnings)
